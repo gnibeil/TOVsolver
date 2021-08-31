@@ -82,23 +82,30 @@ class TOV:
     self.min_p = np.min(p_arr)
     self.max_p = np.max(p_arr)
 
-    if add_crust:
-      if(plot_eos):
-        plt.plot(self.__en_arr / (MeV_fm3_to_pa_cgs / c**2),
-                 self.__p_arr/MeV_fm3_to_pa_cgs ,
-                 linestyle='-', label='original EOS')
-      self.add_crust()
     if(plot_eos):
-      plt.plot(self.__en_arr / (MeV_fm3_to_pa_cgs / c**2), 
-               self.__p_arr/MeV_fm3_to_pa_cgs,
-               linestyle='--', label='EOS with crust')
-
-      plt.xscale('log')
-      plt.yscale('log')
-      plt.xlabel(r'${\rm \varepsilon~(MeV/fm^{3}) }$')
-      plt.ylabel(r'${\rm P~(MeV/fm^{3}) }$')
-      plt.legend()
-      plt.show()
+      plt.plot(self.__en_arr / (MeV_fm3_to_pa_cgs / c**2),
+               self.__p_arr/MeV_fm3_to_pa_cgs ,
+               linestyle='-', label='original EOS')
+      if not add_crust:
+         plt.xscale('log')
+         plt.yscale('log')
+         plt.xlabel(r'${\rm \varepsilon~(MeV/fm^{3}) }$')
+         plt.ylabel(r'${\rm P~(MeV/fm^{3}) }$')
+         plt.legend()
+         plt.show()
+    
+    if add_crust:
+      self.add_crust()
+      if(plot_eos):
+         plt.plot(self.__en_arr / (MeV_fm3_to_pa_cgs / c**2), 
+                  self.__p_arr/MeV_fm3_to_pa_cgs,
+                  linestyle='--', label='EOS with crust')
+         plt.xscale('log')
+         plt.yscale('log')
+         plt.xlabel(r'${\rm \varepsilon~(MeV/fm^{3}) }$')
+         plt.ylabel(r'${\rm P~(MeV/fm^{3}) }$')
+         plt.legend()
+         plt.show()
 
   def add_crust(self):
     """
