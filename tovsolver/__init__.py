@@ -1,3 +1,6 @@
+# SPDX-FileCopyrigthText: 2019-2020 Anton Motornenko (FIAS)
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 ## Copyright 2019 Anton Motornenko (FIAS)
 
 ## This program is free software; you can redistribute it and/or
@@ -15,4 +18,4 @@
 
 __version__ = "0.1.0"
 __author__ = "Anton Motornenko (FIAS)"
-__copyright__ = "Copyright 2015-2020 Anton Motornenko (FIAS), GNU GPL 3"
+__copyright__ = "Copyright 2015-2020 Anton Motornenko (FIAS), GNU GPL v3.0 or later"

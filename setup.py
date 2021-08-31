@@ -1,3 +1,6 @@
+# SPDX-FileCopyrigthText: 2019-2020 Anton Motornenko (FIAS)
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 from __future__ import absolute_import
 
 from setuptools import setup, find_packages

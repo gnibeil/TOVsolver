@@ -1,3 +1,6 @@
+# SPDX-FileCopyrigthText: 2019-2020 Anton Motornenko (FIAS)
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 import math
 
 G  = 6.6730831e-8
